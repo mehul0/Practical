@@ -8,9 +8,11 @@
 
     <include
         android:id="@+id/include"
-        layout="@layout/toolbat" />
+        layout="@layout/toolbar" />
 
     <ImageView
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
         android:id="@+id/img_detail_activity"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         initViews();
     }
 
+    //Initialize the Views
     private void initViews() {
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("Practical");
@@ -59,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(imageAdapter);
     }
 
+    //prepare Data for Adapter/ReclclerView
     private ArrayList<Image> prepareData() {
         ArrayList<Image> imageArrayList = new ArrayList<>();
         for (int i = 0; i < image_urls.length; i++) {

@@ -6,7 +6,7 @@
     android:orientation="vertical"
     tools:context="com.ms.practical.activity.MainActivity">
 
-    <include layout="@layout/toolbat" />
+    <include layout="@layout/toolbar" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view"

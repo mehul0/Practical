@@ -11,36 +11,36 @@ import com.squareup.picasso.Picasso;
 
 public class DetailActivity extends AppCompatActivity {
 
-    private Toolbar toolbar;
     private ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
+        setToolbar();
         initView();
-
-        Intent intent  = getIntent();
-        String images = intent.getStringExtra("image");
-
-        if (images != null){
-            Picasso.with(this).load(images).into(imageView);
-        }
+        setImage();
     }
 
-    public void initView() {
-        toolbar = findViewById(R.id.include);
+    public void setToolbar(){
+        Toolbar toolbar = findViewById(R.id.include);
         toolbar.setTitle("Detail");
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null){
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
-        /*
-        if (getActionBar()!= null){
-            getActionBar().setDisplayHomeAsUpEnabled(true);
-        }*/
+    }
 
+    public void initView() {
         imageView = findViewById(R.id.img_detail_activity);
+    }
+
+    public void setImage(){
+        Intent intent  = getIntent();
+        String imageUrl = intent.getStringExtra("image");
+        if (imageUrl != null){
+            Picasso.with(this).load(imageUrl).into(imageView);
+        }
     }
 }
