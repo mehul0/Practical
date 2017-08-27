@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Practical</string>
+    <string name="practical">Practical</string>
+    <string name="imageview_for_splash_screen">imageView for splash screen</string>
+</resources>
